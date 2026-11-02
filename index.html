@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Playlist Machine</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <span class="logo-icon">ᯤ</span>
+
+            <div>
+                <h1>PLAYLIST<span>MACHINE</span></h1>
+                <p>YOUR MUSIC. YOUR MOMENT.</p>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="led"></span>
+            SISTEMA ONLINE
+        </div>
+    </header>
+
+    <main class="machine">
+
+        <section class="vitrine">
+
+            <div class="vitrine-header">
+                <div>
+                    <h2>ESCOLHA SUA PLAYLIST</h2>
+                    <p>Digite o código do produto para liberar</p>
+                </div>
+
+                <span class="contador" id="contador">
+                    09 PRODUTOS
+                </span>
+            </div>
+
+            <div class="produtos" id="produtos"></div>
+
+            <div class="legenda">
+                <span class="led"></span>
+                PLAYLISTS DISPONÍVEIS
+            </div>
+
+        </section>
+
+        <aside class="painel">
+
+            <div class="display">
+                <span class="display-label">SELEÇÃO DIGITAL</span>
+
+                <div class="display-text" id="displayText">
+                    AGUARDANDO...
+                </div>
+
+                <span class="display-status" id="displayStatus">
+                    INSIRA UM CÓDIGO
+                </span>
+            </div>
+
+            <div class="codigo-area">
+
+                <label for="codigo">CÓDIGO DO PRODUTO</label>
+
+                <div class="codigo-input">
+
+                    <input
+                        type="text"
+                        id="codigo"
+                        placeholder="Ex: MP01"
+                        maxlength="4"
+                        autocomplete="off"
+                    >
+
+                    <button id="confirmar">OK</button>
+
+                </div>
+
+                <p class="erro" id="erro"></p>
+
+            </div>
+
+            <div class="teclado">
+
+                <button data-num="1">1</button>
+                <button data-num="2">2</button>
+                <button data-num="3">3</button>
+
+                <button data-num="4">4</button>
+                <button data-num="5">5</button>
+                <button data-num="6">6</button>
+
+                <button data-num="7">7</button>
+                <button data-num="8">8</button>
+                <button data-num="9">9</button>
+
+                <button data-num="0">0</button>
+                <button id="limpar">C</button>
+                <button id="apagar">⌫</button>
+
+            </div>
+
+            <div class="retirada">
+
+                <div class="retirada-topo">
+                    <span>COMPARTIMENTO</span>
+                    <span class="led" id="ledRetirada"></span>
+                </div>
+
+                <div class="compartimento" id="compartimento">
+
+                    <div class="porta">
+                        <span>♫</span>
+                        <p>RETIRE SUA PLAYLIST</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>PLAYLIST MACHINE © 2026</p>
+        
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
