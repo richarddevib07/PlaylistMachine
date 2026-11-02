@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --navy: #061326;
+    --navy-light: #102641;
+    --blue: #00aaff;
+    --white: #f4f7fb;
+    --silver: #b9c4d0;
+    --gray: #657589;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(
+        circle at top,
+        #173252,
+        #061326 55%,
+        #020812
+    );
+
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+
+    min-height: 100vh;
+    padding: 30px 5%;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+
+.topo {
+    max-width: 1250px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+    place-items: center;
+
+    background: linear-gradient(135deg, #00aaff, #164b82);
+
+    border-radius: 12px;
+
+    font-size: 32px;
+
+    box-shadow: 0 0 25px #00aaff44;
+}
+
+.logo h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.logo h1 span {
+    color: var(--blue);
+}
+
+.logo p {
+    color: var(--silver);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.status {
+    font-size: 11px;
+    color: #c7d7e8;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.led {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    background: #32e69a;
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px #32e69a;
+}
+
+
+
+.machine {
+    max-width: 1250px;
+    margin: auto;
+
+    background: linear-gradient(
+        135deg,
+        #26394f,
+        #080f1b 35%,
+        #1b2b3e
+    );
+
+    border: 3px solid #657589;
+    border-radius: 18px;
+
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 300px;
+
+    gap: 22px;
+
+    box-shadow:
+        0 30px 80px #0008,
+        inset 0 0 20px #ffffff08;
+}
+
+
+
+.vitrine {
+    background: #020812;
+
+    border: 2px solid #657589;
+    border-radius: 12px;
+
+    padding: 18px;
+
+    min-width: 0;
+}
+
+.vitrine-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.vitrine-header h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.vitrine-header p {
+    color: var(--silver);
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.contador {
+    color: var(--blue);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+
+
+.produtos {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.produto {
+    background: linear-gradient(145deg, #142940, #07101c);
+
+    border: 1px solid #43556a;
+    border-radius: 10px;
+
+    padding: 9px;
+
+    color: white;
+    text-align: left;
+
+    cursor: default;
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.produto img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    display: block;
+}
+
+.produto h3 {
+    font-size: 12px;
+    margin: 10px 0 5px;
+}
+
+.codigo-produto {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--blue);
+    font-size: 10px;
+}
+
+.genero {
+    font-size: 9px;
+    color: var(--silver);
+    margin-top: 5px;
+}
+
+.legenda {
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid #293b50;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 10px;
+    color: var(--silver);
+}
+
+
+
+.painel {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.display {
+    background: #020a12;
+
+    border: 2px solid #657589;
+    border-radius: 8px;
+
+    padding: 15px;
+    min-height: 105px;
+
+    box-shadow: inset 0 0 15px #000;
+}
+
+.display-label {
+    color: var(--silver);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.display-text {
+    color: #00c4ff;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+
+    margin: 15px 0 8px;
+
+    overflow-wrap: anywhere;
+
+    text-shadow: 0 0 10px #00aaff66;
+}
+
+.display-status {
+    color: #7e9bb7;
+    font-size: 9px;
+}
+
+
+
+.codigo-area label {
+    display: block;
+
+    color: var(--silver);
+    font-size: 10px;
+
+    margin-bottom: 8px;
+}
+
+.codigo-input {
+    display: flex;
+    gap: 7px;
+}
+
+.codigo-input input {
+    width: 100%;
+    min-width: 0;
+
+    background: #020a12;
+    color: white;
+
+    border: 1px solid #657589;
+    border-radius: 5px;
+
+    padding: 12px;
+
+    outline: none;
+
+    text-transform: uppercase;
+}
+
+.codigo-input input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 10px #00aaff33;
+}
+
+.codigo-input button {
+    background: var(--blue);
+    color: #00111f;
+
+    font-weight: 800;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 0 17px;
+}
+
+.erro {
+    color: #ff7474;
+    font-size: 11px;
+
+    margin-top: 8px;
+    min-height: 14px;
+}
+
+
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.teclado button {
+    background: linear-gradient(145deg, #dbe3ec, #8e9cac);
+
+    border: 1px solid #f4f7fb;
+    border-radius: 5px;
+
+    color: #061326;
+
+    padding: 12px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.teclado button:hover {
+    background: var(--blue);
+    transform: scale(1.04);
+}
+
+
+
+.retirada {
+    margin-top: auto;
+
+    border: 2px solid #657589;
+    border-radius: 9px;
+
+    background: #020812;
+
+    padding: 10px;
+}
+
+.retirada-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 9px;
+    color: var(--silver);
+
+    margin-bottom: 10px;
+}
+
+.compartimento {
+    min-height: 125px;
+
+    border: 2px solid #293b50;
+    border-radius: 7px;
+
+    background: linear-gradient(#000, #0b1725);
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.porta {
+    text-align: center;
+    color: #657589;
+    font-size: 10px;
+}
+
+.porta span {
+    font-size: 30px;
+}
+
+.porta p {
+    margin-top: 5px;
+}
+
+/* PRÊMIO */
+
+.premio {
+    width: 90%;
+
+    background: #102641;
+
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+
+    padding: 8px;
+
+    text-align: center;
+
+    animation: cair 0.8s ease-out;
+}
+
+.premio img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.premio h3 {
+    font-size: 11px;
+    margin: 6px 0;
+}
+
+.premio a {
+    display: inline-block;
+
+    color: white;
+    background: #087fce;
+
+    padding: 8px 10px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.premio a:hover {
+    background: #00aaff;
+}
+
+
+
+@keyframes cair {
+    0% {
+        transform: translateY(-160px);
+        opacity: 0;
+    }
+
+    70% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+footer {
+    max-width: 1250px;
+    margin: 25px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #7e91a7;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+
+@media (max-width: 850px) {
+
+    .machine {
+        grid-template-columns: 1fr;
+    }
+
+    .painel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .display,
+    .retirada {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px 3%;
+    }
+
+    .topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .vitrine {
+        padding: 10px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .vitrine-header h2 {
+        font-size: 12px;
+    }
+
+    .painel {
+        display: flex;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
